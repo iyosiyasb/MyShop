@@ -13,16 +13,14 @@ namespace MyShop.Models
 		[Display(Name = "Full Name"), Required]
 		[StringLength(50)]
 		public string FullName { get; set; }
-		[Display(Name ="User Name"),Required]
-		public string UserName { get; set; }
-	     
-		[Display(Name ="CompanyName"),Required]
+
+		[Display(Name = "CompanyName"), Required]
 		public string CompanyName { get; set; }
 
-		[Display(Name ="Address"),Required]
+		[Display(Name = "Address"), Required]
 		public string Address { get; set; }
 
-		
+
 		public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
 		{
 			// Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

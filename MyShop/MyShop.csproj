@@ -200,21 +200,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712060852121_InitialCreate.cs" />
-    <Compile Include="Migrations\201712060852121_InitialCreate.Designer.cs">
-      <DependentUpon>201712060852121_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712060946493_addfullname.cs" />
-    <Compile Include="Migrations\201712060946493_addfullname.Designer.cs">
-      <DependentUpon>201712060946493_addfullname.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712060953477_addfullname1.cs" />
-    <Compile Include="Migrations\201712060953477_addfullname1.Designer.cs">
-      <DependentUpon>201712060953477_addfullname1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712090312488_addcompanyname.cs" />
-    <Compile Include="Migrations\201712090312488_addcompanyname.Designer.cs">
-      <DependentUpon>201712090312488_addcompanyname.cs</DependentUpon>
+    <Compile Include="Migrations\201712092122251_username.cs" />
+    <Compile Include="Migrations\201712092122251_username.Designer.cs">
+      <DependentUpon>201712092122251_username.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -367,17 +355,8 @@
     <Content Include="Scripts\jquery-3.2.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712060852121_InitialCreate.resx">
-      <DependentUpon>201712060852121_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712060946493_addfullname.resx">
-      <DependentUpon>201712060946493_addfullname.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712060953477_addfullname1.resx">
-      <DependentUpon>201712060953477_addfullname1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712090312488_addcompanyname.resx">
-      <DependentUpon>201712090312488_addcompanyname.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712092122251_username.resx">
+      <DependentUpon>201712092122251_username.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

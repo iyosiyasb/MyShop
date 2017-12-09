@@ -6,14 +6,14 @@ namespace MyShop.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addcompanyname : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    public sealed partial class username : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addcompanyname));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(username));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712090312488_addcompanyname"; }
+            get { return "201712092122251_username"; }
         }
         
         string IMigrationMetadata.Source
