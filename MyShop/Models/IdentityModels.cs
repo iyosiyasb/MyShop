@@ -30,16 +30,24 @@ namespace MyShop.Models
 		}
 	}
 
+	public class ApplicationRole : IdentityRole
+	{
+		public ApplicationRole() : base() { }
+		public ApplicationRole(string roleName) : base(roleName) { }
+	}
+
 	public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 	{
 		public ApplicationDbContext()
 			: base("DefaultConnection", throwIfV1Schema: false)
 		{
 		}
-
+		public DbSet<Product> Products { get; set;}
+		public DbSet<Employee>Employees {get;set;}
 		public static ApplicationDbContext Create()
 		{
 			return new ApplicationDbContext();
 		}
+		
 	}
 }

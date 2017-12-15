@@ -119,6 +119,8 @@
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -194,9 +196,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -204,18 +208,70 @@
     <Compile Include="Migrations\201712092122251_username.Designer.cs">
       <DependentUpon>201712092122251_username.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712112125323_product.cs" />
+    <Compile Include="Migrations\201712122310211_addcompanyname.cs" />
+    <Compile Include="Migrations\201712140125308_employee.cs" />
+    <Compile Include="Migrations\201712140714284_role.cs" />
+    <Compile Include="Migrations\201712140714284_role.Designer.cs">
+      <DependentUpon>201712140714284_role.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Product4.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -278,6 +334,8 @@
     <Content Include="Scripts\jquery-3.2.1.slim.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -287,14 +345,6 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Views\Home\maps.html" />
-    <Content Include="Views\Home\maps_files\1x1-white.png" />
-    <Content Include="Views\Home\maps_files\googlelogo_62x24_with_2_stroke_color_66x26dp.png" />
-    <Content Include="Views\Home\maps_files\googlelogo_light_62x24_with_2_stroke_color_66x26dp.png" />
-    <Content Include="Views\Home\maps_files\ListAccounts.html" />
-    <Content Include="Views\Home\maps_files\photo.jpg" />
-    <Content Include="Views\Home\maps_files\saved_resource.html" />
-    <Content Include="Views\Home\maps_files\widget.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -329,22 +379,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\maps_files\api.js.download" />
-    <Content Include="Views\Home\maps_files\cb=gapi%281%29.loaded_0" />
-    <Content Include="Views\Home\maps_files\cb=gapi.loaded_0" />
-    <Content Include="Views\Home\maps_files\cbk" />
-    <Content Include="Views\Home\maps_files\cbk%281%29" />
-    <Content Include="Views\Home\maps_files\dn.js.download" />
-    <Content Include="Views\Home\maps_files\pb=!1m5!1m4!1i14!2i7548!3i13230!4i128!2m2!1e1!3i748!3m9!2sen!3sus!5e1105!12m1!1e4!12m1!1e47!12m1!1e3!4e0!5m1!1e0" />
-    <Content Include="Views\Home\maps_files\pb=!1m5!1m4!1i14!2i7548!3i13231!4i128!2m2!1e1!3i748!3m9!2sen!3sus!5e1105!12m1!1e4!12m1!1e47!12m1!1e3!4e0!5m1!1e0" />
-    <Content Include="Views\Home\maps_files\pb=!1m5!1m4!1i14!2i7549!3i13230!4i128!2m2!1e1!3i748!3m9!2sen!3sus!5e1105!12m1!1e4!12m1!1e47!12m1!1e3!4e0!5m1!1e0" />
-    <Content Include="Views\Home\maps_files\pb=!1m5!1m4!1i14!2i7549!3i13231!4i128!2m2!1e1!3i748!3m9!2sen!3sus!5e1105!12m1!1e4!12m1!1e47!12m1!1e3!4e0!5m1!1e0" />
-    <Content Include="Views\Home\maps_files\pb=!1m5!1m4!1i14!2i7550!3i13230!4i128!2m2!1e1!3i748!3m9!2sen!3sus!5e1105!12m1!1e4!12m1!1e47!12m1!1e3!4e0!5m1!1e0" />
-    <Content Include="Views\Home\maps_files\pb=!1m5!1m4!1i14!2i7550!3i13231!4i128!2m2!1e1!3i748!3m9!2sen!3sus!5e1105!12m1!1e4!12m1!1e47!12m1!1e3!4e0!5m1!1e0" />
-    <Content Include="Views\Home\maps_files\PQMXuY6MlKBLQCoydS_eTwE-g1k9WHzhWAyB_BDUb3g.js.download" />
-    <Content Include="Views\Home\maps_files\rs=AA2YrTs_88MK2OUI4SDpxJdYGBZEUYVN7w" />
-    <Content Include="Views\Home\maps_files\rs=ACT90oEsN41_N7ifNHMwiHcEljTZBCA1CQ" />
     <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\Employee\Delete.cshtml" />
+    <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Role\Details.cshtml" />
+    <Content Include="Views\Role\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -358,6 +407,12 @@
     <EmbeddedResource Include="Migrations\201712092122251_username.resx">
       <DependentUpon>201712092122251_username.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712140714284_role.resx">
+      <DependentUpon>201712140714284_role.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

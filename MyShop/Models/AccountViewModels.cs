@@ -8,14 +8,16 @@ namespace MyShop.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
-
+		[Required]
 		[Display(Name ="Full Name")]
 		 public string FullName { get; set; }
+		[Required]
 	     [Display(Name ="User Name")]
 		public string UserName { get; set; }
-
-
-    }
+		[Required]
+		[Display(Name ="Company Name")]
+		public string CompanyName { get; set; }
+	}
 
     public class ExternalLoginListViewModel
     {
@@ -62,7 +64,6 @@ namespace MyShop.Models
 		[Display(Name ="User Name")]
 		[Required]
 		public string UserName { get; set; }
-
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
@@ -82,7 +83,7 @@ namespace MyShop.Models
 		public string UserName { get; set; }
 		[Display(Name ="Full Name"),Required]
 		public string FullName { get; set; }
-		[Display(Name ="CompanyName"),Required]
+		[Display(Name ="Company Name"),Required]
 		public string CompanyName { get; set; }
 		[Display(Name ="Address"),Required]
 		public string Address { get; set; }
@@ -96,6 +97,7 @@ namespace MyShop.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+		public string RoleName { get; set; }
     }
 
     public class ResetPasswordViewModel

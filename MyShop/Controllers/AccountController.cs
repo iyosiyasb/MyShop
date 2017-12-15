@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MyShop.Models;
+using System.Data.Entity.Validation;
+using System.Collections.Generic;
 
 namespace MyShop.Controllers
 {
@@ -17,18 +19,34 @@ namespace MyShop.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+		private ApplicationRoleManager _roleManager;
 
-        public AccountController()
+
+		public AccountController()
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager ,ApplicationRoleManager roleManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
+			RoleManager = roleManager;
         }
+		public ApplicationRoleManager RoleManager
+		{
+			get
+			{
+				return _roleManager ?? HttpContext.GetOwinContext().Get<ApplicationRoleManager>();
+			}
+			private set
+			{
+				_roleManager = value;
+			}
+		}
 
-        public ApplicationSignInManager SignInManager
+
+
+		public ApplicationSignInManager SignInManager
         {
             get
             {
@@ -139,6 +157,10 @@ namespace MyShop.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+			List<SelectListItem> list = new List<SelectListItem>();
+			foreach (var role in RoleManager.Roles)
+				list.Add(new SelectListItem() { Value = role.Name, Text = role.Name });
+			ViewBag.Roles = list;
             return View();
         }
 
@@ -155,6 +177,7 @@ namespace MyShop.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+					result = await UserManager.AddToRoleAsync(user.Id, model.RoleName);
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
@@ -367,9 +390,12 @@ namespace MyShop.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email,FullName=model.FullName };
-                var result = await UserManager.CreateAsync(user);
-                if (result.Succeeded)
+			
+					var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, FullName = model.FullName, CompanyName = model.CompanyName };
+					var result = await UserManager.CreateAsync(user);
+				
+
+					if (result.Succeeded)
                 {
                     result = await UserManager.AddLoginAsync(user.Id, info.Login);
                     if (result.Succeeded)
@@ -382,7 +408,7 @@ namespace MyShop.Controllers
             }
 
             ViewBag.ReturnUrl = returnUrl;
-            return View(model);
+            return View( model);
         }
 
         //
