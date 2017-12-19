@@ -27,5 +27,12 @@ namespace MyShop.Controllers
 
 			return View();
 		}
+
+        public ActionResult Products()
+        {
+            ViewBag.Message = " ";
+
+            return View();
+        }
 	}
 }

@@ -272,6 +272,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="css\products.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -281,6 +282,7 @@
     <Content Include="images\border-light.png" />
     <Content Include="images\border.png" />
     <Content Include="images\box-gray-bg.png" />
+    <Content Include="images\Braai-Bread.jpg" />
     <Content Include="images\bullet-home.png" />
     <Content Include="images\button-gray.png" />
     <Content Include="images\button-yellow-small.png" />
@@ -291,22 +293,30 @@
     <Content Include="images\file-bg.png" />
     <Content Include="images\form-date.gif" />
     <Content Include="images\header-bg.png" />
-    <Content Include="images\home-image-2.png" />
     <Content Include="images\home-slider-button.png" />
     <Content Include="images\ico-mail.png" />
+    <Content Include="images\karamel-melktert.jpg" />
+    <Content Include="images\Liberian-Ginger-Cookies.jpg" />
     <Content Include="images\login-details.png" />
     <Content Include="images\login-ie.png" />
+    <Content Include="images\Malva-Pudding.jpg" />
     <Content Include="images\menu-submenu-bg.png" />
     <Content Include="images\menu-submenu-mark.png" />
+    <Content Include="images\milk-tart.jpg" />
     <Content Include="images\order-online-header.png" />
+    <Content Include="images\Peppermint-Crisp-Tart..jpg" />
+    <Content Include="images\Potato-Pone.jpg" />
     <Content Include="images\product-overlay.png" />
     <Content Include="images\products-button.png" />
     <Content Include="images\products-menu-active.png" />
     <Content Include="images\products-menu-sub-active.png" />
     <Content Include="images\products-menu.png" />
+    <Content Include="images\Sago-Pudding.jpg" />
     <Content Include="images\slider-next.png" />
     <Content Include="images\slider-page.png" />
     <Content Include="images\slider-prev.png" />
+    <Content Include="images\Soetkoekies.jpg" />
+    <Content Include="images\West-African-Sugar-Cookies.jpg" />
     <Content Include="images\yelp.png" />
     <Content Include="images\_about_us_history.jpg" />
     <Content Include="images\_banner-1.jpg" />
@@ -394,6 +404,7 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
