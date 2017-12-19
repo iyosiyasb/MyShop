@@ -1,0 +1,46 @@
+﻿.product-pics {
+    position: relative;
+    left: 0px;
+    top: 25px;
+}
+
+.per-dozen {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 10px;
+}
+
+h4:hover {
+    color: #B50500;
+}
+
+.scroll {
+    font-size: 25px;
+    color: #B50500;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #B50500;
+    color: white;
+}
+
+h1:hover {
+    color: #FFC90D;
+}
