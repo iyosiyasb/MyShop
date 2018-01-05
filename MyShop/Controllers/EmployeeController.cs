@@ -10,7 +10,7 @@ using System.Web.Mvc;
 using MyShop.Models;
 
 namespace MyShop.Controllers
-{
+{    [Authorize(Roles = "Admin")]
     public class EmployeeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

@@ -394,7 +394,7 @@ input, textarea, select {
 .home-content {
 	float: left;
 	width: 980px;
-	min-height: 536px;
+	min-height: 336px;
 	position: relative;
 	margin-bottom: 30px;
 	z-index: 6;

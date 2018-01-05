@@ -8,7 +8,6 @@ namespace MyShop.Controllers
 {
 	public class HomeController : Controller
 	{
-		
 		public ActionResult Index()
 		{
 			return View();
@@ -25,6 +24,11 @@ namespace MyShop.Controllers
 		{
 			ViewBag.Message = " ";
 
+			return View();
+		}
+		[Authorize]
+		public ActionResult Products()
+		{
 			return View();
 		}
 	}

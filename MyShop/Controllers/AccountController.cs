@@ -391,7 +391,7 @@ namespace MyShop.Controllers
                     return View("ExternalLoginFailure");
                 }
 			
-					var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, FullName = model.FullName, CompanyName = model.CompanyName };
+					var user = new ApplicationUser { Email = model.Email, FullName = model.FullName, UserName = model.UserName, CompanyName = model.CompanyName };
 					var result = await UserManager.CreateAsync(user);
 				
 

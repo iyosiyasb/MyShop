@@ -18,13 +18,13 @@ namespace MyShop.Models
 
 		public string LastName { get; set; }
 		[StringLength(100)]
-		
+
 		public string Address { get; set; }
 		[StringLength(100)]
 		public string Email { get; set; }
 		[StringLength(50)]
 		public string City { get; set; }
-	    [StringLength(50)]
+		[StringLength(50)]
 
 		public string Country { get; set; }
 

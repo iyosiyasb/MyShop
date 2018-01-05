@@ -1,0 +1,361 @@
+﻿@{
+    ViewBag.Title = "";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Null</h3>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/css/products.css" type="text/css">
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<div>
+<div>
+	<marquee behavior="scroll" direction="left" class="scroll">"Come and Taste the Flavors of Africa..." <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwj-7bXy9oXYAhXCYSYKHb6kCW8QjRwIBw&url=http%3A%2F%2Fmoziru.com%2Fexplore%2FAfrica%2520clipart%2520vector%2F&psig=AOvVaw0dsUm8lRhAUudzaB4zMf5A&ust=1513218111132458"></marquee>
+</div>
+
+<div id="root"></div>
+<div class="container container-homepage clearfix">
+
+	<div class="home-slider">
+		<a href="#" class="slide-nav slide-prev"><img src="images/blank.html" alt="" /><span></span></a> <a href="#" class="slide-nav slide-next"><img src="images/blank.html" alt="" /><span></span></a>
+		
+		<div class="slides">
+			<div class="slide slide-1" data-preview="images/_banner-1-preview.jpg">
+				<div class="inside">
+					<div class="slide-content">
+						<div class="slide-button"> <a href="products/breads.html">View our products</a> </div>
+					</div>
+				</div>
+			</div>
+			<div class="slide slide-2" data-preview="~/images/_banner-3-preview.jpg">
+				<div class="inside">
+					<div class="slide-content">
+						<div class="slide-text">
+							<span>
+								From American<br />
+							</span>Wheat Fields.
+						</div>
+						<div class="slide-button"> <a href="products/breads.html">View our products</a> </div>
+					</div>
+				</div>
+			</div>
+			<div class="slide slide-3" data-preview="images/_banner-2-preview.jpg">
+				<div class="inside">
+					<div class="slide-content">
+						<div class="slide-text">
+							<span>
+								From our Table<br />
+							</span> to Yours
+						</div>
+						<div class="slide-button"> <a href="products/breads.html">View our products</a> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="container clearfix">
+		<div class="wrap">
+			<div class="page-content">
+				<div class="content-inside">
+					<div class="content-title">
+						<h2>Our Lady's Bakery</h2>
+						<h1>Africa's Finest Baked Goods</h1>
+						<br>
+						<p>"Come and taste the flavors of Africa."</p>
+
+					</div>
+
+
+					<div class="product-pics">
+						<h6 class="per-dozen">***Sold Per Dozen</h6>
+						<div class="braai">
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Braai Bread">
+								<input type="hidden" name="amount" value="17.99">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>Braai Bread - $17.99</h4>
+							<img src="~/images/Braai-Bread.jpg" class="col-md-6" width="200px" height="200px">
+
+						</div>
+
+						<div class="karamel">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Karamel Melktert">
+								<input type="hidden" name="amount" value="11.99">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>Karamel Melktert - $11.99</h4>
+							<img src="~/images/karamel-melktert.jpg" class="col-md-6" width="200px" height="200px">
+
+						</div>
+
+						<div class="liberian">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Liberian Ginger Cookies">
+								<input type="hidden" name="amount" value="9.99">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>***Liberian Ginger Cookies*** - $9.99</h4>
+							<img src="~/images/Liberian-Ginger-Cookies.jpg" class="col-md-6" width="200px" height="200px">
+
+						</div>
+
+						<div class="malva">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Malva Pudding">
+								<input type="hidden" name="amount" value="7.99">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>Malva Pudding - $7.99</h4>
+							<img src="~/images/Malva-Pudding.jpg" class="col-md-6" width="200px" height="200px">
+						</div>
+
+						<div class="milk">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Milk Tart">
+								<input type="hidden" name="amount" value="12.79">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>***Milk Tart*** - $12.79</h4>
+							<img src="~/images/milk-tart.jpg" class="col-md-6" width="200px" height="200px">
+						</div>
+
+						<div class="peppermint">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Peppermint Crisp Tart">
+								<input type="hidden" name="amount" value="14.50">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>Peppermint Crisp Tart - $14.50</h4>
+							<img src="~/images/Peppermint-Crisp-Tart..jpg" class="col-md-6" width="200px" height="200px">
+						</div>
+
+						<div class="potato">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Potato Pone">
+								<input type="hidden" name="amount" value="9.99">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>Potato Pone - $9.99</h4>
+							<img src="~/images/Potato-Pone.jpg" class="col-md-6" width="200px" height="200px">
+						</div>
+
+						<div class="sago">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Sago Pudding">
+								<input type="hidden" name="amount" value="7.99">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>Sago Pudding - $7.99 *per bowl*</h4>
+							<img src="~/images/Sago-Pudding.jpg" class="col-md-6" width="200px" height="200px">
+						</div>
+
+						<div class="soetkoekies">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="Soetkoekies">
+								<input type="hidden" name="amount" value="9.99">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>***Soetkoekies*** - $9.99</h4>
+							<img src="~/images/Soetkoekies.jpg" class="col-md-6" width="200px" height="200px">
+						</div>
+
+						<div class="west">
+
+							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<!-- Identify your business so that you can collect the payments. -->
+								<input type="hidden" name="business" value="kin@kinskards.com">
+
+								<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+
+								<!-- Specify details about the item that buyers will purchase. -->
+								<input type="hidden" name="item_name" value="West African Sugar Cookies">
+								<input type="hidden" name="amount" value="11.99">
+								<input type="hidden" name="currency_code" value="USD">
+
+								<!-- Continue shopping on the web page for birthday cards -->
+								<input type="hidden" name="shopping_url" value="file:///C:/Projects/BakeryFrontEnd/public/products.html">
+								<input type="image" name="submit"
+									   src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+									   alt="Add to Cart">
+								<img alt="" width="1" height="1"
+									 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+							</form>
+							<h4>***West African Sugar Cookies*** - $11.99</h4>
+							<img src="~/images/West-African-Sugar-Cookies.jpg" class="col-md-6" width="200px" height="200px">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<footer>
+	<h1>Check Us Out!!!</h1>
+	<br>
+	<a href="https://www.facebook.com/pages/Our-Lady-Bakery/120757931272752?fref=ts" class="fa fa-facebook"></a>
+
+	<br>
+	<br>
+</footer>
+
+	</div>

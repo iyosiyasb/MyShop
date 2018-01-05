@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyShop.Controllers
 {
+	[Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
 		private ApplicationRoleManager _roleManager;
