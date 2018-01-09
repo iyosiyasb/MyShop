@@ -15,14 +15,15 @@ namespace MyShop.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Employee
-        public async Task<ActionResult> Index()
-        {
-            return View(await db.Employees.ToListAsync());
-        }
+		// GET: Employee
 
-        // GET: Employee/Details/5
-        public async Task<ActionResult> Details(string id)
+		public async Task<ActionResult> Index()
+		{
+			return View(await db.Employees.ToListAsync());
+		}
+
+		// GET: Employee/Details/5
+		public async Task<ActionResult> Details(string id)
         {
             if (id == null)
             {

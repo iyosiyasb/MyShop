@@ -13,7 +13,7 @@
 			<p>Please call us today <strong>972-602-0601</strong>  We'd be delighted to give you a personal tour of our facility, and for wholesale buyers, access to the our user-friendly Web Ordering System.</p>
 		</div>
 		<div className="button-box">
-			<a href="~/Account/Register" class="button button-gray">Create an account</a>
+			<a href="Account/Register" class="button button-gray">Create an account</a>
 		</div>
 	</div>
 			</div>

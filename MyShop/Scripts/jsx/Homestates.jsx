@@ -10,7 +10,7 @@
 			               <li> Grand prairie, TX</li>
 			               <li> Richardson, TX</li>
 		             </ul>
-		            <a href="About" class="button button-gray">More info</a>
+		            <a href="Home/About" class="button button-gray">More info</a>
 	          </div>
 			</div>
 	 </div>
